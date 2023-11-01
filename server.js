@@ -37,7 +37,7 @@ io.on('connection', function(socket){
 			socket.emit('fatal','rtmp destination setup error.');
 			return;
 		}
-		var regexValidator=/^rtmp:\/\/[^\s]*$/;//TODO: should read config
+		var regexValidator = /^rtmp[s]?:\/\/[^\s]*$/;//TODO: should read config
 		if(!regexValidator.test(m)){
 			socket.emit('fatal','rtmp address rejected.');
 			return;
