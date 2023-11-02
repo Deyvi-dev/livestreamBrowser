@@ -1,76 +1,79 @@
-body{
-  width: 100%;
-  margin:auto;
-
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .header {
   text-align: center;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  width: 100%;
+  padding: 15px 0;
   color: #FFFFFF;
-  background-image: linear-gradient(#FC601A, #FD8B25)
-  
-  }
-.formPadding{
- padding: 20px;
- margin: auto;
+  background: linear-gradient(#FC601A, #FD8B25);
 }
-  
-  
+
 .form {
-  margin: auto;
-  font-size: 25px;
+  font-size: 20px;
   text-align: center;
-  width: 50%;
-  background: #fff;
-  padding: 20px;
- 
-  
-}
-input[type=text] {
-  -webkit-appearance: none; -moz-appearance: none;
   margin: auto;
-  width: 25%; height: 40px;
-  line-height: 40px;font-size: 25px;
-  
+  padding: 10px;
+  border-radius: 10px;
+  background: #ffffff;
+  cursor: pointer;
 }
-input[type=radio] {
- width: 25px; height: 25px;
- -webkit-border-radius: 22px; -moz-border-radius: 22px; border-radius: 22px;
- border: 1px solid #bbb;
+
+form label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
 }
-input[type=checkbox] {
- width: 25px; height: 25px;
- -webkit-border-radius: 22px; -moz-border-radius: 22px; border-radius: 22px;
- border: 1px solid #bbb;
+
+form select,
+form input[type="text"],
+form input[type="number"],
+form select {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px 0;
 }
-button{
+
+form input[type="checkbox"],
+form input[type="radio"] {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #bbb;
+  border-radius: 50%;
+}
+
+button {
   font-size: 17px;
-    display: block;
-    padding: 20px;
-    font-weight: bold;
-    height: 2.5em; width: 50%;
-    border: 1px solid #bbb;
-    -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;
-   }
+  display: block;
+  padding: 15px;
+  font-weight: bold;
+  width: 90%;
+  max-width: 600px;
+  margin: 10px auto;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+}
 
-.input{
+.video {
+  max-width: 100%;
   margin: auto;
-  width: 75%;
+}
 
+#output_console {
+  width: 99%;
 }
-.video{
-  width:75%;
-  margin: auto;
- 
-}
-#output_console{
-  width:100%;
-}
-#footer{
+
+#footer {
   font-size: large;
   color: black;
-  padding:10px;
+  padding: 10px;
+  text-align: center;
 }
