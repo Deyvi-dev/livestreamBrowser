@@ -10,12 +10,11 @@ var fs = require('fs');
 var https = require('https');
 app.use(express.static('public'));
 
-const server = require('http').createServer(//{
- //key: fs.readFileSync('abels-key.pem'),
- // cert: fs.readFileSync('abels-cert.pem')
- 
-	//},
-	app);
+const server = https.createServer({
+  key: fs.readFileSync('key.pem'),
+  cert: fs.readFileSync('cert.pem')  
+},
+app);
 
 
 var io = require('socket.io')(server);

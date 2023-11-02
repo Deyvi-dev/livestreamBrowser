@@ -60,7 +60,7 @@ If you'd like to share your screen & camera, try <a href="https://record.a.video
 <br><br>
 <input class="form" type="hidden" id="socket.io_address" value="/"/>
 <label class="form" for="option_url" >RTMP Destination:</label>
-<input class="form" type="text" id="option_url" style="width:33%" value="rtmp://broadcast.api.video/s/15d29fed-c7f2-4948-98ba-ad09b84a40d0"/>
+<input class="form" type="text" id="option_url" style="width:33%" value=""/>
 <br>
 <input class="form" type="checkbox"  style="display:none" id="checkbox_Reconection" checked="true">
 <label class="form" style="display:none"  >Reconnection </label>
@@ -97,6 +97,17 @@ Connect the server, then start streaming.
 	More sample apps can be found at <a href="https://a.video">a.video</a>.
 
 </div>
+<script>
+
+const urlValue = new URLSearchParams(window.location.search).get('url');
+
+const inputElement = document.getElementById('option_url');
+
+if (inputElement && urlValue) {
+  inputElement.value = urlValue;
+}
+
+</script>
 <script>
 
 //	var constraints = navigator.mediaDevices.getSupportedConstraints();
